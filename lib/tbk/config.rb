@@ -19,6 +19,18 @@ module TBK
       @environment = environment if environment
       (@environment || ENV['TBK_COMMERCE_ENVIRONMENT'] || :production.to_sym)
     end
+
+    def confirmation_url_ip_address(host = "127.0.0.1")
+      host
+    end
+
+    def confirmation_url_port(port = nil)
+      port
+    end
+
+    def confirmation_url_protocol(protocol = nil)
+      protocol
+    end    
   end
 
   # Returns the configuration object
